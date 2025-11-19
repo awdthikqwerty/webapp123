@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import Header from "./components/Header";
-import GameBoard from "./components/GameBoard";
-import Controls from "./components/Controls";
-import Stats from "./components/Stats";
-import BalanceBox from "./components/BalanceBox";
+import Header from "./components/Header.jsx";
+import GameBoard from "./components/GameBoard.jsx";
+import Controls from "./components/Controls.jsx";
+import Stats from "./components/Stats.jsx";
+import BalanceBox from "./components/BalanceBox.jsx";
+
 
 /**
  * Simple Telegram WebApp integration:
@@ -117,4 +118,5 @@ export default function App() {
     </div>
   );
 }
+
 
