@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Controls({ size, setSize, mines, setMines }) {
   return (
     <div className="controls">
@@ -29,3 +31,4 @@ export default function Controls({ size, setSize, mines, setMines }) {
     </div>
   );
 }
+
