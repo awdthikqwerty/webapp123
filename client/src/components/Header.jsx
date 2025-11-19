@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Header({ balance }) {
   return (
     <header className="header">
@@ -12,3 +14,4 @@ export default function Header({ balance }) {
     </header>
   );
 }
+
