@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function BalanceBox({ balance }) {
   return (
     <div className="balance-box">
@@ -6,3 +8,4 @@ export default function BalanceBox({ balance }) {
     </div>
   );
 }
+
