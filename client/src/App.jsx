@@ -23,7 +23,7 @@ export default function App() {
 
   useEffect(() => {
     // register/get user from backend
-    fetch("/api/register", {
+    fetch(`${import.meta.env.VITE_API}/api/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ telegramId })
@@ -37,7 +37,7 @@ export default function App() {
 
   function handleLose() {
     // deduct bet
-    fetch("/api/update-balance", {
+    fetch(`${import.meta.env.VITE_API}/api/update-balance`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ telegramId, change: -Math.abs(bet) })
@@ -46,7 +46,7 @@ export default function App() {
       .then((user) => user?.balance && setBalance(Number(user.balance)))
       .catch(() => {});
     // record game with negative profit
-    fetch("/api/game", {
+    fetch(`${import.meta.env.VITE_API}/api/game`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ telegramId, profit: -Math.abs(bet) })
@@ -56,7 +56,7 @@ export default function App() {
 
   function handleWin(profit) {
     // profit is positive amount to add
-    fetch("/api/update-balance", {
+    fetch(`${import.meta.env.VITE_API}/api/update-balance`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ telegramId, change: Number(profit) })
@@ -117,3 +117,4 @@ export default function App() {
     </div>
   );
 }
+
